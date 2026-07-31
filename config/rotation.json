@@ -1,0 +1,10 @@
+{
+  "anchor_sunday": "2026-08-02",
+  "anchor_note": "anchor_sunday = 轮到第一个 DSP（YMB）的那个周日，改这里即可校准轮换",
+  "rotation": [
+    { "dsp": "YMB", "owner": "Weiwen Liang", "open_id": "" },
+    { "dsp": "PEL", "owner": "xiaoguan chen", "open_id": "" },
+    { "dsp": "DAE", "owner": "Daniel", "open_id": "" },
+    { "dsp": "SDG", "owner": "Marcus Stefan", "open_id": "" }
+  ]
+}
