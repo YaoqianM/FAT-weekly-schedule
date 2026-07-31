@@ -1,0 +1,20 @@
+name: Feishu 周日卸货轮值通知
+
+on:
+  schedule:
+    # 16:00 UTC 周日 = 太平洋时间(PDT)周日 9:00 AM
+    # 冬令时(PST, 11月初–3月初)期间请改为 '0 17 * * 0'
+    - cron: '0 16 * * 0'
+  workflow_dispatch:   # 手动触发，方便测试
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Send Feishu rotation message
+        env:
+          FEISHU_WEBHOOK: ${{ secrets.FEISHU_WEBHOOK }}
+        run: bash scripts/send_notification.sh
